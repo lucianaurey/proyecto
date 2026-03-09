@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú | VacaFría Heladería Premium</title>
+    <meta name="description" content="Catálogo de productos de VacaFría con carrito de compras.">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header class="header interno">
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo VacaFría">
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="menu.html" class="activo">Menú</a></li>
+                <li><a href="quienes.html">Nosotros</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <a href="contacto.html" class="btn-header">Haz tu pedido</a>
+    </header>
+
+    <main>
+
+        <section class="menu-hero">
+            <div class="menu-hero-overlay"></div>
+            <div class="menu-hero-content">
+                <p class="mini-titulo">Nuestro menú</p>
+                <h1>Descubre tus favoritos</h1>
+                <p>Explora nuestros helados, copas, brownies y bebidas frías.</p>
+            </div>
+        </section>
+
+        <section class="catalogo-menu">
+            <div class="catalogo-top">
+                <div>
+                    <p class="mini-titulo">Catálogo</p>
+                    <h2>Productos destacados</h2>
+                </div>
+                <button class="btn-ver-carrito" onclick="scrollToCarrito()">Ver carrito</button>
+            </div>
+
+            <div class="catalogo-layout">
+
+                <div class="productos-grid">
+
+                    <article class="producto-card">
+                        <div class="producto-badge">Helado</div>
+                        <img src="images/heladoooo.jpg" alt="Helado simple">
+                        <div class="producto-card-body">
+                            <h3>Helado Simple</h3>
+                            <p>1 sabor a elección, ideal para disfrutar algo fresco y rápido.</p>
+                            <span>Bs. 15</span>
+                            <button onclick="abrirModal('Helado Simple', '1 sabor a elección, ideal para disfrutar algo fresco y rápido.', 15, 'images/heladoooo.jpg')">Ver detalle</button>
+                        </div>
+                    </article>
+
+                    <article class="producto-card">
+                        <div class="producto-badge">Helado</div>
+                        <img src="images/DOBLE.jpg" alt="Helado doble">
+                        <div class="producto-card-body">
+                            <h3>Helado Doble</h3>
+                            <p>2 sabores a elección, perfecto para combinar tus favoritos.</p>
+                            <span>Bs. 25</span>
+                            <button onclick="abrirModal('Helado Doble', '2 sabores a elección, perfecto para combinar tus favoritos.', 25, 'images/DOBLE.jpg')">Ver detalle</button>
+                        </div>
+                    </article>
+
+                    <article class="producto-card">
+                        <div class="producto-badge">Helado</div>
+                        <img src="images/TRIPLE.jpg" alt="Helado triple">
+                        <div class="producto-card-body">
+                            <h3>Helado Triple</h3>
+                            <p>3 sabores para una experiencia completa y más variedad.</p>
+                            <span>Bs. 33</span>
+                            <button onclick="abrirModal('Helado Triple', '3 sabores para una experiencia completa y más variedad.', 33, 'images/TRIPLE.jpg')">Ver detalle</button>
+                        </div>
+                    </article>
+
+                    <article class="producto-card">
+                        <div class="producto-badge">Copa</div>
+                        <img src="images/copaa.jpg" alt="Copa Mix">
+                        <div class="producto-card-body">
+                            <h3>Copa Mix</h3>
+                            <p>2 o 3 sabores con agregados a elección y presentación especial.</p>
+                            <span>Bs. 40</span>
+                            <button onclick="abrirModal('Copa Mix', '2 o 3 sabores con agregados a elección y presentación especial.', 40, 'images/copaa.jpg')">Ver detalle</button>
+                        </div>
+                    </article>
+
+                    <article class="producto-card">
+                        <div class="producto-badge">Copa</div>
+                        <img src="images/moo.txt" alt="Copa Moo Berry">
+                        <div class="producto-card-body">
+                            <h3>Moo Berry</h3>
+                            <p>Jalea de frutilla, yogurt, frutos del bosque y crema chantilly.</p>
+                            <span>Bs. 40</span>
+                            <button onclick="abrirModal('Moo Berry', 'Jalea de frutilla, yogurt, frutos del bosque y crema chantilly.', 40, 'images/moo.jpg')">Ver detalle</button>
+                        </div>
+                    </article>
+
+                    <article class="producto-card">
+                        <div class="producto-badge">Copa</div>
+                        <img src="images/pie.txt" alt="Copa Pie de Limón">
+                        <div class="producto-card-body">
+                            <h3>Pie de Limón</h3>
+                            <p>Caramelo, bizcochuelos, merenguitos, mousse de limón y chantilly.</p>
+                            <span>Bs. 45</span>
+                            <button onclick="abrirModal('Pie de Limón', 'Caramelo, bizcochuelos, merenguitos, mousse de limón y chantilly.', 45, 'images/pie.jpg')">Ver detalle</button>
+                        </div>
+                    </article>
+
+                    <article class="producto-card">
+                        <div class="producto-badge">Bebida</div>
+                        <img src="images/milkshake.jpg" alt="Milkshake mediano">
+                        <div class="producto-card-body">
+                            <h3>Milkshake Mediano</h3>
+                            <p>Disponible en vainilla, chocolate, Oreo, dulce de leche y frutilla.</p>
+                            <span>Bs. 35</span>
+                            <button onclick="abrirModal('Milkshake Mediano', 'Disponible en vainilla, chocolate, Oreo, dulce de leche y frutilla.', 35, 'images/milkshake.jpg')">Ver detalle</button>
+                        </div>
+                    </article>
+
+                    <article class="producto-card">
+                        <div class="producto-badge">Postre</div>
+                        <img src="images/brownies.jpeg" alt="Brownie con helado">
+                        <div class="producto-card-body">
+                            <h3>Brownie con Helado</h3>
+                            <p>Brownie tibio con helado artesanal y salsa de chocolate.</p>
+                            <span>Bs. 30</span>
+                            <button onclick="abrirModal('Brownie con Helado', 'Brownie tibio con helado artesanal y salsa de chocolate.', 30, 'images/brownies.jpeg')">Ver detalle</button>
+                        </div>
+                    </article>
+
+                </div>
+
+                <aside class="carrito" id="carrito">
+                    <h2>Tu carrito</h2>
+                    <div id="lista-carrito">
+                        <p class="carrito-vacio">Aún no agregaste productos.</p>
+                    </div>
+
+                    <div class="carrito-total">
+                        <h3>Total: <span id="total">Bs. 0</span></h3>
+                        <button class="btn-vaciar" onclick="vaciarCarrito()">Vaciar carrito</button>
+                    </div>
+                </aside>
+
+            </div>
+        </section>
+
+    </main>
+
+    <div class="modal" id="modalProducto">
+        <div class="modal-contenido">
+            <button class="cerrar-modal" onclick="cerrarModal()">✕</button>
+
+            <div class="modal-grid">
+                <div class="modal-imagen">
+                    <img id="modalImg" src="" alt="">
+                </div>
+
+                <div class="modal-info">
+                    <p class="mini-titulo">Producto</p>
+                    <h2 id="modalNombre"></h2>
+                    <p id="modalDescripcion"></p>
+                    <h3 id="modalPrecio"></h3>
+                    <button class="btn-modal-carrito" id="btnAgregarModal">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-contenido">
+            <div>
+                <h3>VacaFría</h3>
+                <p>Heladería premium con sabor, frescura y creatividad.</p>
+            </div>
+
+            <div>
+                <h4>Contacto</h4>
+                <p>Cochabamba, Bolivia</p>
+                <p>+591 70000000</p>
+                <p>contacto@vacafria.com</p>
+            </div>
+
+            <div>
+                <h4>Horario</h4>
+                <p>Lunes a domingo</p>
+                <p>10:00 - 22:00</p>
+            </div>
+        </div>
+
+        <p class="copy">© 2026 Helados VacaFría. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        let carrito = [];
+
+        function abrirModal(nombre, descripcion, precio, imagen) {
+            document.getElementById('modalNombre').textContent = nombre;
+            document.getElementById('modalDescripcion').textContent = descripcion;
+            document.getElementById('modalPrecio').textContent = `Bs. ${precio}`;
+            document.getElementById('modalImg').src = imagen;
+            document.getElementById('modalImg').alt = nombre;
+
+            const btnAgregar = document.getElementById('btnAgregarModal');
+            btnAgregar.onclick = function () {
+                agregarAlCarrito(nombre, precio, imagen);
+                cerrarModal();
+            };
+
+            document.getElementById('modalProducto').classList.add('mostrar');
+        }
+
+        function cerrarModal() {
+            document.getElementById('modalProducto').classList.remove('mostrar');
+        }
+
+        function agregarAlCarrito(nombre, precio, imagen) {
+            carrito.push({ nombre, precio, imagen });
+            renderCarrito();
+        }
+
+        function eliminarDelCarrito(index) {
+            carrito.splice(index, 1);
+            renderCarrito();
+        }
+
+        function vaciarCarrito() {
+            carrito = [];
+            renderCarrito();
+        }
+
+        function renderCarrito() {
+            const listaCarrito = document.getElementById('lista-carrito');
+            const totalElemento = document.getElementById('total');
+
+            if (carrito.length === 0) {
+                listaCarrito.innerHTML = '<p class="carrito-vacio">Aún no agregaste productos.</p>';
+                totalElemento.textContent = 'Bs. 0';
+                return;
+            }
+
+            listaCarrito.innerHTML = '';
+            let total = 0;
+
+            carrito.forEach((producto, index) => {
+                total += producto.precio;
+
+                const item = document.createElement('div');
+                item.classList.add('carrito-item');
+
+                item.innerHTML = `
+                    <img src="${producto.imagen}" alt="${producto.nombre}">
+                    <div class="carrito-item-info">
+                        <h4>${producto.nombre}</h4>
+                        <p>Bs. ${producto.precio}</p>
+                    </div>
+                    <button class="btn-eliminar" onclick="eliminarDelCarrito(${index})">✕</button>
+                `;
+
+                listaCarrito.appendChild(item);
+            });
+
+            totalElemento.textContent = `Bs. ${total}`;
+        }
+
+        function scrollToCarrito() {
+            document.getElementById('carrito').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        window.addEventListener('click', function(e) {
+            const modal = document.getElementById('modalProducto');
+            if (e.target === modal) {
+                cerrarModal();
+            }
+        });
+    </script>
+
+</body>
+</html>
